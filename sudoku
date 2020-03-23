@@ -1,7 +1,7 @@
 import random
 from functools import reduce
 
-# Varje 3x3 med dess värden och tomma rutor representeras av en 0:a (Every 3x3 square is indexed where 1_1 is the first square on the first line
+# Every 3x3 square is indexed where 1_1 is the first square on the first line
 sqr1_1 = [4, 9, 6, 0, 0, 8, 7, 5, 0]
 sqr1_2 = [0, 7, 0, 9, 0, 3, 8, 0, 2]
 sqr1_3 = [0, 0, 0, 0, 0, 0, 0, 1, 9]
@@ -14,7 +14,6 @@ sqr3_1 = [0, 8, 0, 0, 6, 0, 0, 0, 0]
 sqr3_2 = [0, 0, 7, 0, 5, 4, 2, 8, 9]
 sqr3_3 = [9, 0, 0, 0, 3, 0, 1, 5, 6]
 
-# hor är kort för horisontell och numrena representerar vilken rad den ligger på. vert för vertikal eller kolumn
 # hor is short for horizontal and hor1 means first row and vert is short for vertical or column
 hor1 = []
 hor2 = []
@@ -44,9 +43,6 @@ sudoku = []
 sudoku = [x for x in sqr1_1 + sqr1_2 + sqr1_3 + sqr2_1 + sqr2_2 + sqr2_3 + sqr3_1 + sqr3_2 + sqr3_3 if
           type(x) == int]  # Making a list of all the values
 
-# Prints out all the values to compare with the output from the program
-
-# Dessa listor innehåller talen som fattas i respektive 3x3 kvadrat. 1_1 betyder första kvadraten i första raden
 # These lists contains the missing numbers in each 3x3 square. 1_1 means first square on the first row
 num_list = list(range(1, 10))
 num_1_1 = list(set(num_list) - set(sqr1_1))
