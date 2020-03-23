@@ -123,7 +123,7 @@ print(sqr1_1, sqr1_2, sqr1_3, sqr2_1, sqr2_2,sqr2_3,sqr3_1,sqr3_2,sqr3_3)
 for s in range(10):
     # Updating the variables each time it runs
 
-        hor1 = [x for x in (sqr1_1[:3] + sqr1_2[:3] + sqr1_3[:3]) if type(x) == int]
+    hor1 = [x for x in (sqr1_1[:3] + sqr1_2[:3] + sqr1_3[:3]) if type(x) == int]
     hor2 = [x for x in (sqr1_1[3:6] + sqr1_2[3:6] + sqr1_3[3:6]) if type(x) == int]
     hor3 = [x for x in sqr1_1[6:] + sqr1_2[6:] + sqr1_3[6:] if type(x) == int]
 
@@ -159,201 +159,201 @@ for s in range(10):
                 elif x == 2:
                     sqr1_1[x] = list(set(sqr1_1[x]) - set(vert3 + hor1))
                 elif x == 3:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod1 + hor2))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert1 + hor2))
                 elif x == 4:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod2 + hor2))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert2 + hor2))
                 elif x == 5:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod3 + hor2))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert3 + hor2))
                 elif x == 6:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod1 + hor3))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert1 + hor3))
                 elif x == 7:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod2 + hor3))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert2 + hor3))
                 elif x == 8:
-                    sqr1_1[x] = list(set(sqr1_1[x]) - set(lod3 + hor3))
+                    sqr1_1[x] = list(set(sqr1_1[x]) - set(vert3 + hor3))
 
         if type(sqr1_2[x]) == list:
             if len(sqr1_2[x]) == 1:  # Check if there is only one number left
                 sqr1_2[x] = sqr1_2[x][0]  # If so, then replace the list with that single value
             elif len(sqr1_2[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod4 + hor1))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert4 + hor1))
                 elif x == 1:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod5 + hor1))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert5 + hor1))
                 elif x == 2:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod6 + hor1))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert6 + hor1))
                 elif x == 3:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod4 + hor2))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert4 + hor2))
                 elif x == 4:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod5 + hor2))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert5 + hor2))
                 elif x == 5:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod6 + hor2))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert6 + hor2))
                 elif x == 6:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod4 + hor3))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert4 + hor3))
                 elif x == 7:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod5 + hor3))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert5 + hor3))
                 elif x == 8:
-                    sqr1_2[x] = list(set(sqr1_2[x]) - set(lod6 + hor3))
+                    sqr1_2[x] = list(set(sqr1_2[x]) - set(vert6 + hor3))
 
         if type(sqr1_3[x]) == list:
             if len(sqr1_3[x]) == 1:  # Check if there is only one number left
                 sqr1_3[x] = sqr1_3[x][0]  # If so, then replace the list with that single value
             elif len(sqr1_3[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod7 + hor1))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert7 + hor1))
                 elif x == 1:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod8 + hor1))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert8 + hor1))
                 elif x == 2:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod9 + hor1))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert9 + hor1))
                 elif x == 3:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod7 + hor2))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert7 + hor2))
                 elif x == 4:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod8 + hor2))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert8 + hor2))
                 elif x == 5:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod9 + hor2))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert9 + hor2))
                 elif x == 6:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod7 + hor3))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert7 + hor3))
                 elif x == 7:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod8 + hor3))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert8 + hor3))
                 elif x == 8:
-                    sqr1_3[x] = list(set(sqr1_3[x]) - set(lod9 + hor3))
+                    sqr1_3[x] = list(set(sqr1_3[x]) - set(vert9 + hor3))
 
         if type(sqr2_1[x]) == list:
             if len(sqr2_1[x]) == 1:  # Check if there is only one number left
                 sqr2_1[x] = sqr2_1[x][0]  # If so, then replace the list with that single value
             elif len(sqr2_1[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod1 + hor4))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert1 + hor4))
                 elif x == 1:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod2 + hor4))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert2 + hor4))
                 elif x == 2:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod3 + hor4))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert3 + hor4))
                 elif x == 3:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod1 + hor5))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert1 + hor5))
                 elif x == 4:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod2 + hor5))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert2 + hor5))
                 elif x == 5:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod3 + hor5))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert3 + hor5))
                 elif x == 6:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod1 + hor6))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert1 + hor6))
                 elif x == 7:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod2 + hor6))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert2 + hor6))
                 elif x == 8:
-                    sqr2_1[x] = list(set(sqr2_1[x]) - set(lod3 + hor6))
+                    sqr2_1[x] = list(set(sqr2_1[x]) - set(vert3 + hor6))
 
         if type(sqr2_2[x]) == list:
             if len(sqr2_2[x]) == 1:  # Check if there is only one number left
                 sqr2_2[x] = sqr2_2[x][0]  # If so, then replace the list with that single value
             elif len(sqr2_2[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod4 + hor4))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert4 + hor4))
                 elif x == 1:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod5 + hor4))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert5 + hor4))
                 elif x == 2:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod6 + hor4))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert6 + hor4))
                 elif x == 3:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod4 + hor5))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert4 + hor5))
                 elif x == 4:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod5 + hor5))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert5 + hor5))
                 elif x == 5:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod6 + hor5))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert6 + hor5))
                 elif x == 6:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod4 + hor6))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert4 + hor6))
                 elif x == 7:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod5 + hor6))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert5 + hor6))
                 elif x == 8:
-                    sqr2_2[x] = list(set(sqr2_2[x]) - set(lod6 + hor6))
+                    sqr2_2[x] = list(set(sqr2_2[x]) - set(vert6 + hor6))
 
         if type(sqr2_3[x]) == list:
             if len(sqr2_3[x]) == 1:  # Check if there is only one number left
                 sqr2_3[x] = sqr2_3[x][0]  # If so, then replace the list with that single value
             elif len(sqr2_3[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod7 + hor4))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert7 + hor4))
                 elif x == 1:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod8 + hor4))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert8 + hor4))
                 elif x == 2:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod9 + hor4))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert9 + hor4))
                 elif x == 3:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod7 + hor5))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert7 + hor5))
                 elif x == 4:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod8 + hor5))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert8 + hor5))
                 elif x == 5:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod9 + hor5))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert9 + hor5))
                 elif x == 6:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod7 + hor6))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert7 + hor6))
                 elif x == 7:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod8 + hor6))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert8 + hor6))
                 elif x == 8:
-                    sqr2_3[x] = list(set(sqr2_3[x]) - set(lod9 + hor6))
+                    sqr2_3[x] = list(set(sqr2_3[x]) - set(vert9 + hor6))
 
         if type(sqr3_1[x]) == list:
             if len(sqr3_1[x]) == 1:  # Check if there is only one number left
                 sqr3_1[x] = sqr3_1[x][0]  # If so, then replace the list with that single value
             elif len(sqr3_1[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod1 + hor7))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert1 + hor7))
                 elif x == 1:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod2 + hor8))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert2 + hor8))
                 elif x == 2:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod3 + hor9))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert3 + hor9))
                 elif x == 3:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod1 + hor7))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert1 + hor7))
                 elif x == 4:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod2 + hor8))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert2 + hor8))
                 elif x == 5:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod3 + hor9))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert3 + hor9))
                 elif x == 6:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod1 + hor7))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert1 + hor7))
                 elif x == 7:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod2 + hor8))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert2 + hor8))
                 elif x == 8:
-                    sqr3_1[x] = list(set(sqr3_1[x]) - set(lod3 + hor9))
+                    sqr3_1[x] = list(set(sqr3_1[x]) - set(vert3 + hor9))
 
         if type(sqr3_2[x]) == list:
             if len(sqr3_2[x]) == 1:  # Check if there is only one number left
                 sqr3_2[x] = sqr3_2[x][0]  # If so, then replace the list with that single value
             elif len(sqr3_2[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:  # Check if index = 0 to know which row and column to use for elimination
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod4 + hor7))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert4 + hor7))
                 elif x == 1:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod5 + hor8))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert5 + hor8))
                 elif x == 2:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod6 + hor9))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert6 + hor9))
                 elif x == 3:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod4 + hor7))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert4 + hor7))
                 elif x == 4:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod5 + hor8))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert5 + hor8))
                 elif x == 5:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod6 + hor9))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert6 + hor9))
                 elif x == 6:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod4 + hor7))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert4 + hor7))
                 elif x == 7:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod5 + hor8))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert5 + hor8))
                 elif x == 8:
-                    sqr3_2[x] = list(set(sqr3_2[x]) - set(lod6 + hor9))
+                    sqr3_2[x] = list(set(sqr3_2[x]) - set(vert6 + hor9))
 
         if type(sqr3_3[x]) == list:
             if len(sqr3_3[x]) == 1:  # Check if there is only one number left
                 sqr3_3[x] = sqr3_3[x][0]  # If so, then replace the list with that single value
             elif len(sqr3_3[x]) > 1:  # If len of list >1 then we need to continue the elimination
                 if x == 0:# Check if index = 0 to know which row and column to use for elimination
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod7 + hor7))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert7 + hor7))
                 elif x == 1:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod8 + hor8))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert8 + hor8))
                 elif x == 2:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod9 + hor9))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert9 + hor9))
                 elif x == 3:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod7 + hor7))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert7 + hor7))
                 elif x == 4:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod8 + hor8))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert8 + hor8))
                 elif x == 5:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod9 + hor9))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert9 + hor9))
                 elif x == 6:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod7 + hor7))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert7 + hor7))
                 elif x == 7:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod8 + hor8))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert8 + hor8))
                 elif x == 8:
-                    sqr3_3[x] = list(set(sqr3_3[x]) - set(lod9 + hor9))
+                    sqr3_3[x] = list(set(sqr3_3[x]) - set(vert9 + hor9))
 
     # Updating the whole sudoku
     sudoku = [x for x in (sqr1_1 + sqr1_2 + sqr1_3 + sqr2_1 + sqr2_2 + sqr2_3 + sqr3_1 + sqr3_2 + sqr3_3) if type(x) == int]
