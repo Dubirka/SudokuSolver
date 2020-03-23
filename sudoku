@@ -3,7 +3,7 @@ import threading
 import time
 from functools import reduce
 
-#Varje 3x3 med dess värden och tomma rutor representeras av en 0:a
+#Varje 3x3 med dess värden och tomma rutor representeras av en 0:a (Every 3x3 square is indexed where 1_1 is the first square on the first line
 sqr1_1=[4,9,6,0,0,8,7,5,0]
 sqr1_2=[0,7,0,9,0,3,8,0,2]
 sqr1_3=[0,0,0,0,0,0,0,1,9]
@@ -17,6 +17,7 @@ sqr3_2=[0,0,7,0,5,4,2,8,9]
 sqr3_3=[9,0,0,0,3,0,1,5,6]
 
 #hor är kort för horisontell och numrena representerar vilken rad den ligger på. lod för lodrät eller kolumn
+#hor is short for horizontal and hor1 means first row and lod is short for column
 hor1=[]
 hor2=[]
 hor3=[]
@@ -43,11 +44,12 @@ lod9=[]
 
 
 sudoku=[]
-sudoku=[x for x in sqr1_1+sqr1_2+sqr1_3+sqr2_1+sqr2_2+sqr2_3+sqr3_1+sqr3_2+sqr3_3 if type(x)==int] #Gör en stor lista med alla värden
+sudoku=[x for x in sqr1_1+sqr1_2+sqr1_3+sqr2_1+sqr2_2+sqr2_3+sqr3_1+sqr3_2+sqr3_3 if type(x)==int] #Making a list of all the values
 
-print(sudoku) #Printar ut värdena för att kunna jämföra med outputen
+print(sudoku) #Prints out all the values to compare with the output from the program
 
 #Dessa listor innehåller talen som fattas i respektive 3x3 kvadrat. 1_1 betyder första kvadraten i första raden
+#These lists contains the missing numbers in each 3x3 square. 1_1 means first square on the first row
 num_list=list(range(1,10))
 num_1_1=list(set(num_list) - set(sqr1_1))
 num_1_2=list(set(num_list) - set(sqr1_2))
@@ -59,7 +61,7 @@ num_3_1=list(set(num_list) - set(sqr3_1))
 num_3_2=list(set(num_list) - set(sqr3_2))
 num_3_3=list(set(num_list) - set(sqr3_3))
 
-for i in range(9): #Ersätter alla rutor innehållande 0 med listorna för potentiella tal
+for i in range(9): #Replaces all the zeros with a list containing the missing numbers
     if sqr1_1[i] == 0:
         sqr1_1[i] = num_1_1
 
@@ -88,10 +90,11 @@ for i in range(9): #Ersätter alla rutor innehållande 0 med listorna för poten
         sqr3_3[i] = num_3_3
 
 
-#Det ska såsmåningom vara en while loop som körs till hela är färdig men tills dess så använder jag for loop varje gång jag testar koden
+#while loop that runs until the sum is the sum of all the nums 1-9 times 9. Meaning the sudoku is complete. But not active because code is
+#is not finished. Instead using for loop to try it out
 # while sum(sudoku)!=9*reduce(lambda x,y: x+y, range(1,10)): 
 for s in range(10):
-  #Variablerna uppdateras varje gång loopen körs
+  #Updating the variables each time it runs
     hor1 = [x for x in (sqr1_1[:3] + sqr1_2[:3] + sqr1_3[:3]) if type(x) == int]
     hor2 = [x for x in (sqr1_2[3:6] + sqr1_2[3:6] + sqr1_3[3:6]) if type(x) == int]
     hor3 = [x for x in sqr1_3[6:] + sqr1_2[6:] + sqr1_3[6:] if type(x) == int]
@@ -323,6 +326,7 @@ for s in range(10):
                     sqr3_3[x] = list(set(sqr3_3[x]) - set(lod8+hor8))
                 elif x==8:
                     sqr3_3[x] = list(set(sqr3_3[x]) - set(lod9+hor9))
-
+    
+    #Updating the whole sudoku
     sudoku=[x for x in (sqr1_1 + sqr1_2 + sqr1_3 + sqr2_1 + sqr2_2 + sqr2_3 + sqr3_1 + sqr3_2 + sqr3_3) if type(x)==int]
 print(sudoku)
