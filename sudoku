@@ -13,35 +13,6 @@ sqr3_1 = [0, 8, 0, 0, 6, 0, 0, 0, 0]
 sqr3_2 = [0, 0, 7, 0, 5, 4, 2, 8, 9]
 sqr3_3 = [9, 0, 0, 0, 3, 0, 1, 5, 6]
 
-# hor is short for horizontal and hor1 means first row and vert is short for vertical or column
-hor1 = []
-hor2 = []
-hor3 = []
-
-hor4 = []
-hor5 = []
-hor6 = []
-
-hor7 = []
-hor8 = []
-hor9 = []
-
-vert1 = []
-vert2 = []
-vert3 = []
-
-vert4 = []
-vert5 = []
-vert6 = []
-
-vert7 = []
-vert8 = []
-vert9 = []
-
-sudoku = []
-sudoku = [x for x in sqr1_1 + sqr1_2 + sqr1_3 + sqr2_1 + sqr2_2 + sqr2_3 + sqr3_1 + sqr3_2 + sqr3_3 if
-          type(x) == int]  # Making a list of all the values if needed to print out
-
 # These lists contains the missing numbers in each 3x3 square. 1_1 means first square
 num_list = list(range(1, 10))
 num_1_1 = list(set(num_list) - set(sqr1_1))
@@ -319,4 +290,7 @@ while sum(sudoku)!=9*reduce(lambda x,y: x+y, range(1,10)):
                 elif x == 8:
                     sqr3_3[x] = list(set(sqr3_3[x]) - set(vert9 + hor9))
 
-print(sqr1_1,sqr1_2,sqr1_3,sqr2_1,sqr2_2,sqr2_3,sqr3_1,sqr3_2,sqr3_3)
+#Making a list containing all the values in the sudoku if needed to be printed
+sudoku = [x for x in sqr1_1 + sqr1_2 + sqr1_3 + sqr2_1 + sqr2_2 + sqr2_3 + sqr3_1 + sqr3_2 + sqr3_3 if type(x) == int]
+
+print(sqr1_1,sqr1_2,sqr1_3,sqr2_1,sqr2_2,sqr2_3,sqr3_1,sqr3_2,sqr3_3) #Printing out the result each 3x3 square at the time
