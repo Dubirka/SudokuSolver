@@ -1,3 +1,10 @@
+'''This is a sudoku solver for simple sudoku's. You put in the numbers from each 3x3 square below and for every empty square you put in
+the number 0. It starts by creating taking a list all the possible numbers 1-9 and eliminates all the existing numbers in each 3x3 
+squars and replaces the zeros with these possible numbers. Then we start to search for the index(placement) of these lists and we continue 
+the elimination by comparing it to the rows and columns the squares are on. When we are just left with one number in the list, we replace
+that list with that single value. We continue this elimination process until the sum of the total square is the sum of all the numbers
+1-9*9(for nine squars).'''
+
 from functools import reduce
 
 # Every 3x3 square is indexed where 1_1 is the first square on the first line
